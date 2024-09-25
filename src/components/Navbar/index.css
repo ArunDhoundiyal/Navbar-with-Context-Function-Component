@@ -1,0 +1,45 @@
+.navbar-bg-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  border-bottom: solid 1px darkgrey;
+  height: 100px;
+}
+.home-about-container {
+  display: flex;
+}
+.nav-txt {
+  margin: 8px;
+  font-weight: bold;
+  color: #171f46;
+}
+.website-logo {
+  height: 50px;
+}
+
+.navbar-logo {
+  height: 30px;
+}
+
+@media screen and (max-width: 350px) {
+  .website-logo {
+    height: 30px;
+  }
+
+  .navbar-logo {
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .nav-txt {
+    font-size: 12px;
+  }
+}
+
+.dark {
+  background-color: #333333;
+}
