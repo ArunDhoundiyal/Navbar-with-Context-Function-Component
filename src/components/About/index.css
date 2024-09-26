@@ -8,8 +8,19 @@
   font-family: 'Roboto';
 }
 
-.heading {
+.white-background {
+  background-color: #ffffff;
+}
+.dark-background {
+  background-color: #000000;
+}
+
+.about-dark-heading {
   color: #171f46;
+  font-size: 50px;
+}
+.about-light-heading {
+  color: #ffffff;
   font-size: 50px;
 }
 

@@ -5,17 +5,25 @@
   width: 100%;
   position: fixed;
   top: 0px;
-  border-bottom: solid 1px darkgrey;
   height: 100px;
 }
 .home-about-container {
   display: flex;
+  list-style-type: none;
 }
 .nav-txt {
   margin: 8px;
   font-weight: bold;
-  color: #171f46;
 }
+
+.nav-txt-dark {
+  color: #171f46;
+  text-decoration: none;
+}
+.nav-txt-light {
+  color: #ffffff;
+}
+
 .website-logo {
   height: 50px;
 }

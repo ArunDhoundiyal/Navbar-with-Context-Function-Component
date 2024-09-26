@@ -1,4 +1,5 @@
 import {useContext} from 'react'
+import {Link} from 'react-router-dom'
 import {ThemeContext} from '../../context/ThemeContext'
 import './index.css'
 
@@ -19,11 +20,34 @@ const Navbar = () => {
         alt="website logo"
         className="website-logo"
       />
-      <div className="home-about-container">
-        <p className="nav-txt">Home</p> <p className="nav-txt">About</p>
-      </div>
+      <ul className="home-about-container">
+        <li>
+          <Link
+            to="/"
+            className={`${
+              toggleTheme ? `nav-txt-light` : `nav-txt-dark`
+            } nav-txt`}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/about"
+            className={`${
+              toggleTheme ? `nav-txt-light` : `nav-txt-dark`
+            } nav-txt`}
+          >
+            About
+          </Link>
+        </li>
+      </ul>
       <img
-        src="https://assets.ccbp.in/frontend/react-js/dark-theme-img.png"
+        src={`${
+          toggleTheme
+            ? `https://assets.ccbp.in/frontend/react-js/light-theme-img.png`
+            : 'https://assets.ccbp.in/frontend/react-js/dark-theme-img.png'
+        }`}
         alt="dark-img"
         className="navbar-logo"
         onClick={onClickToggle}

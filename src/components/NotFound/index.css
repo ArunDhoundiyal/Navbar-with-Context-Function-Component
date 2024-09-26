@@ -1,4 +1,4 @@
-.about-white-bg-container {
+.not-found-white-bg-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,13 +8,31 @@
   font-family: 'Roboto';
 }
 
+.white-background {
+  background-color: #ffffff;
+}
+.dark-background {
+  background-color: #000000;
+}
+
 .not-found-sty {
   height: 50%;
 }
 
-.heading {
+.not-found-dark-heading {
   color: #171f46;
   font-size: 50px;
+}
+.not-found-light-heading {
+  color: #ffffff;
+  font-size: 50px;
+}
+.dark-not-found-paragraph {
+  color: #171f46;
+}
+
+.light-not-found-paragraph {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 450px) {

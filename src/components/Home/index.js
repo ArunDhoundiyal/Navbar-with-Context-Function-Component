@@ -1,17 +1,33 @@
+import {useContext} from 'react'
+import {ThemeContext} from '../../context/ThemeContext'
 import Navbar from '../Navbar'
 import './index.css'
 
 const Home = () => {
-  console.log('home')
+  const {toggleTheme} = useContext(ThemeContext)
   return (
-    <div className="bg-container">
+    <div
+      className={`${
+        toggleTheme ? `dark-background` : `white-background`
+      } bg-container`}
+    >
       <Navbar />
       <img
-        src="https://assets.ccbp.in/frontend/react-js/home-light-img.png"
-        alt="home-img"
+        src={`${
+          toggleTheme
+            ? `https://assets.ccbp.in/frontend/react-js/home-dark-img.png`
+            : `https://assets.ccbp.in/frontend/react-js/home-light-img.png`
+        }`}
+        alt="website logo"
         className="image-sty"
       />
-      <h1 className="heading">Home</h1>
+      <h1
+        className={`${
+          toggleTheme ? `home-light-heading` : `home-dark-heading`
+        }`}
+      >
+        Home
+      </h1>
     </div>
   )
 }
